@@ -12,8 +12,19 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'io.rest-assured:rest-assured:4.3.3'
+    testImplementation 'io.rest-assured:json-schema-validator:4.3.3'
+    compile project(':UIUtils')
 }
 
 test {
     useJUnitPlatform()
+}
+
+compileJava {
+    options.compilerArgs << '-Werror'
+}
+
+jar {
+    archiveBaseName = 'requets'
 }

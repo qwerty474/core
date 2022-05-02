@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+    id "application"
+}
+apply plugin: "java"
+compileJava {
+    options.compilerArgs << '-Werror'
+}
+
+jar {
+    archiveBaseName = 'requests'
+}
+
+ext {
+    javaMainClass = "APIUtils/src/main/java/requests/Main.java"
+}
+
+application {
+    mainClassName = javaMainClass
+}
