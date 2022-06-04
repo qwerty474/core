@@ -1,4 +1,4 @@
-package requests;
+package APIUtils.src.main.java.requests;
 
 
 import java.io.IOException;
